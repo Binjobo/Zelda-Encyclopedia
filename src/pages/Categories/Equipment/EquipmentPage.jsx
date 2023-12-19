@@ -1,7 +1,7 @@
 const EquipmentPage = () => {
   return (
     <>
-      <h1>This is the Equipment Page!</h1>
+      <h1>All Equipments</h1>
     </>
   );
 };

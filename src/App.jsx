@@ -2,11 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import MasterSearch from "./components/MasterSearch";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/Home/HomePage";
-import CreaturesPage from "../src/pages/Category/CreaturesPage";
-import EquipmentPage from "../src/pages/Category/EquipmentPage";
-import MaterialsPage from "../src/pages/Category/MaterialsPage";
-import MonstersPage from "../src/pages/Category/MonstersPage";
-import TreasurePage from "../src/pages/Category/TreasurePage";
+import CreaturesPage from "./pages/Categories/Creatures/CreaturesPage";
+import EquipmentPage from "./pages/Categories/Equipment/EquipmentPage";
+import MaterialsPage from "./pages/Categories/Materials/MaterialsPage";
+import MonstersPage from "./pages/Categories/Monsters/MonstersPage";
+import TreasurePage from "./pages/Categories/Treasure/TreasurePage";
+import "./App.css";
 
 const App = () => {
   return (

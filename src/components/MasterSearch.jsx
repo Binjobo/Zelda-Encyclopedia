@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import { useEffect } from "react";
 import SearchIcon from "./searchIcon.svg";
-import ResultInfo from "../pages/Home/ResultInfo";
+import ResultInfo from "./ResultInfo";
 
 const MasterSearch = () => {
   const URL = "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/";
@@ -12,13 +12,8 @@ const MasterSearch = () => {
   const searchZeldaItem = async (entryItem) => {
     const response = await fetch(`${URL}${entryItem}`);
     const data = await response.json();
-    // console.log(data.data);
     setItemInfo(data.data);
   };
-
-  // useEffect(() => {
-  //   searchZeldaItem();
-  // }, []);
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value);
@@ -32,11 +27,16 @@ const MasterSearch = () => {
     <>
       <div className="search">
         <input
-          placeholder="Exact Item Search"
+          placeholder="Enter Exact Name"
           value={searchTerm}
           onChange={handleInput}
         ></input>
-        <img src={SearchIcon} alt="search icon" onClick={handleClick}></img>
+        <img
+          className="searchIcon"
+          src={SearchIcon}
+          alt="search icon"
+          onClick={handleClick}
+        ></img>
       </div>
 
       <div className="searchResult">

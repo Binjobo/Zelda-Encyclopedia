@@ -1,7 +1,7 @@
 const TreasurePage = () => {
   return (
     <>
-      <h1>This is the Treasure Page!</h1>
+      <h1>All Treasures</h1>
     </>
   );
 };
