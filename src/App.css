@@ -1,33 +1,49 @@
 body {
   text-align: center;
   background-color: rgb(213, 228, 237);
+  /* background-image: url("../public/zeldaTOTW.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh; */
 }
 
 /* .app {
   background-color: pink;
 } */
 
+.app h1 {
+  font-size: 4rem;
+  /* margin: 2rem; */
+}
+
 /* navbar */
 nav {
   margin-bottom: 50px;
-  background-color: rgb(20, 135, 135);
+  background-color: rgb(28, 153, 153);
 }
 
 ul {
   display: flex;
-  background-color: rgb(20, 135, 135);
+  background-color: rgb(28, 153, 153);
   width: 100%;
   justify-content: space-evenly;
   padding: 0;
   border: 0;
 }
 
-p {
+/* p {
   font-size: 1.6rem;
-}
+} */
 
 p > a {
-  background-color: rgb(20, 135, 135);
+  background-color: rgb(28, 153, 153);
+  color: black;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+p > a:hover {
+  text-decoration: underline;
 }
 
 /* searchBar */
@@ -35,11 +51,13 @@ p > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1.75rem;
+  padding: 0.8rem 1.75rem;
   border-radius: 2rem;
   background: #0a0c0e;
-  width: 40%;
+  width: 45%;
   margin: 0 auto; 
+  margin-top: 80;
+  margin-bottom: 60;
 }
 
 .search input {
@@ -48,13 +66,13 @@ p > a {
   outline: none;
   color: #61a0b1;
   background: #0a0c0e;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 
 .search img {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   background: #0a0c0e;
 }
@@ -69,8 +87,19 @@ p > a {
   padding: 0;
   color: rgb(12, 60, 94);
   font-style: italic;
+  display: inline-block;
+  margin: 0.6rem;
+  font-size: 1.4rem;
 }
 
+button {
+  height: 35px;
+  width: 35px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: green;
+}
 
 
 /* allSearch */
@@ -79,12 +108,14 @@ p > a {
   text-decoration: none;
   font-size: 1.8rem;
   color: rgb(26, 107, 132);
-  border-bottom: 2px solid rgb(26, 107, 132);
+  border-bottom: 2px solid rgb(36, 125, 152);
 }
 
 .allSearch p {
   display: inline-block;
-  margin: 0.6rem ;
+  margin: 0.6rem;
+  font-size: 1.4rem;
+
   /* background-color: blueviolet; */
   /* text-decoration: underline; */
 }

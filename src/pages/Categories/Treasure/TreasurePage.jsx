@@ -17,6 +17,8 @@ const TreasurePage = () => {
     searchTreasures();
   }, []);
 
+  treasures.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <>
       <h1>All Treasures</h1>

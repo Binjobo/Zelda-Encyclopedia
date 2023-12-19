@@ -18,6 +18,9 @@ const CreaturePage = () => {
     searchCreatures();
   }, []);
 
+  // Sort creatures alphabetically by name
+  creatures.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <>
       <h1>All Creatures</h1>

@@ -8,10 +8,10 @@ const NavBar = () => {
           <NavLink to="/">Home</NavLink>
         </p>
         <p>
-          <NavLink to="/creatures">Creature</NavLink>
+          <NavLink to="/creatures">Creatures</NavLink>
         </p>
         <p>
-          <NavLink to="/equipment">Equipment</NavLink>
+          <NavLink to="/equipment">Equipments</NavLink>
         </p>
         <p>
           <NavLink to="/materials">Materials</NavLink>
@@ -20,7 +20,7 @@ const NavBar = () => {
           <NavLink to="/monsters">Monsters</NavLink>
         </p>
         <p>
-          <NavLink to="/treasure">Treasure</NavLink>
+          <NavLink to="/treasure">Treasures</NavLink>
         </p>
       </ul>
     </nav>

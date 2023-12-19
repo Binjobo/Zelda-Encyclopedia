@@ -18,13 +18,18 @@ const MasterSearch = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleClick = () => {
+  // const handleClick = () => {
+  //   searchZeldaItem(searchTerm);
+  // };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
     searchZeldaItem(searchTerm);
   };
 
   return (
     <>
-      <div className="search">
+      {/* <div className="search">
         <input
           placeholder="Enter Exact Name (e.g. silver lynel)"
           value={searchTerm}
@@ -36,7 +41,19 @@ const MasterSearch = () => {
           alt="search icon"
           onClick={handleClick}
         ></img>
-      </div>
+      </div> */}
+
+      <form className="search" onSubmit={handleSubmit}>
+        <input
+          placeholder="Enter Exact Name (e.g. silver lynel)"
+          value={searchTerm}
+          onChange={handleInput}
+          spellCheck="false"
+        />
+        <button type="submit">
+          <img className="searchIcon" src={SearchIcon} alt="search icon" />
+        </button>
+      </form>
 
       <div className="searchResult">
         {Object.keys(itemInfo).length > 0 && <ResultInfo info={itemInfo} />}

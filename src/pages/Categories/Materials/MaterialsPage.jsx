@@ -17,6 +17,8 @@ const MaterialsPage = () => {
     searchMaterials();
   }, []);
 
+  materials.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <>
       <h1>All Materials</h1>
