@@ -5,25 +5,48 @@ const EquipmentCard = ({ equipment }) => {
   const URL = "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/";
 
   const [equipmentInfo, setEquipmentInfo] = useState([]);
+  const [isInfoVisible, setIsInfoVisible] = useState(false); // New state variable added
 
   const searchZeldaEquipment = async (entryEquipment) => {
     const response = await fetch(`${URL}${entryEquipment}`);
     const data = await response.json();
     setEquipmentInfo(data.data);
+    setIsInfoVisible(true); // Added to show the equipment info when data is received
   };
 
+  // //previous code
+  // const handleClick = () => {
+  //   searchZeldaEquipment(equipment.id);
+  // };
+  // return (
+  //   <>
+  //     <div>
+  //       <p onClick={handleClick}>{equipment.name}</p>
+  //     </div>
+  //     <div className="searchResult">
+  //       {Object.keys(equipmentInfo).length > 0 && (
+  //         <EquipmentInfo info={equipmentInfo} />
+  //       )}
+  //     </div>
+  //   </>
+  // );
+
   const handleClick = () => {
-    searchZeldaEquipment(equipment.id);
+    if (!isInfoVisible) {
+      searchZeldaEquipment(equipment.id);
+    } else {
+      setIsInfoVisible(false);
+    }
   };
+
   return (
     <>
       <div>
         <p onClick={handleClick}>{equipment.name}</p>
       </div>
       <div className="searchResult">
-        {Object.keys(equipmentInfo).length > 0 && (
-          <EquipmentInfo info={equipmentInfo} />
-        )}
+        {isInfoVisible && <EquipmentInfo info={equipmentInfo} />}
+        <hr />
       </div>
     </>
   );

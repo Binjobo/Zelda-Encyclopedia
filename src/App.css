@@ -92,8 +92,8 @@ p > a {
 
 /* searchResult */
 .searchResult {
-  background-color: pink;
-  /* border: 20px;  */
+  /* background-color: pink; */
+  border: 20px; 
 }
 
 
