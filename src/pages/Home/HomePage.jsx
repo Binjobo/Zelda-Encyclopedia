@@ -1,5 +1,11 @@
+import MasterSearch from "./MasterSearch";
+
 const Homepage = () => {
-  return <></>;
+  return (
+    <>
+      <MasterSearch />
+    </>
+  );
 };
 
 export default Homepage;

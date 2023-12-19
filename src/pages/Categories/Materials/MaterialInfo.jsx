@@ -1,29 +1,29 @@
-const ResultInfo = ({ info }) => {
+const MaterialInfo = ({ info }) => {
   return (
     <div className="info">
       <div className="category">
         <div>
-          <h4>Category</h4>
+          <h2>Category</h2>
           <p>{info.category}</p>
         </div>
 
         <div className="locations">
-          <h4>Locations</h4>
+          <h2>Locations</h2>
           <p>{info.common_locations}</p>
         </div>
 
         <div className="description">
-          <h4>Description</h4>
+          <h2>Description</h2>
           <p>{info.description}</p>
         </div>
 
         <div className="drops">
-          <h4>Items Drops</h4>
+          <h2>Items Drops</h2>
           <p>{info.drops}</p>
         </div>
 
         <div className="picture">
-          <h4>Image</h4>
+          <h2>Image</h2>
           <img
             src={
               info.image !== "N/A"
@@ -38,4 +38,4 @@ const ResultInfo = ({ info }) => {
   );
 };
 
-export default ResultInfo;
+export default MaterialInfo;

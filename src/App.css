@@ -1,14 +1,103 @@
-* {
-    /* max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem; */
-    text-align: center;
-  }
+body {
+  text-align: center;
+  background-color: rgb(213, 228, 237);
+}
 
-  .search {
-    background-color: green;
-  }
+/* .app {
+  background-color: pink;
+} */
 
-  /* .searchIcon:hover {
-    cursor: pointer;
-  } */
+/* navbar */
+nav {
+  margin-bottom: 50px;
+  background-color: rgb(20, 135, 135);
+}
+
+ul {
+  display: flex;
+  background-color: rgb(20, 135, 135);
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+p > a {
+  background-color: rgb(20, 135, 135);
+}
+
+/* searchBar */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  border-radius: 2rem;
+  background: #0a0c0e;
+  width: 40%;
+  margin: 0 auto; 
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: #61a0b1;
+  background: #0a0c0e;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.search img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background: #0a0c0e;
+}
+
+.searchResult h2 {
+  margin: 0;
+  margin-top: 30px;
+}
+
+.searchResult p {
+  margin: 0;
+  padding: 0;
+  color: rgb(12, 60, 94);
+  font-style: italic;
+}
+
+
+
+/* allSearch */
+.allSearch > div > p:hover {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: rgb(26, 107, 132);
+  border-bottom: 2px solid rgb(26, 107, 132);
+}
+
+.allSearch p {
+  display: inline-block;
+  margin: 0.6rem ;
+  /* background-color: blueviolet; */
+  /* text-decoration: underline; */
+}
+
+
+/* searchResult */
+.searchResult {
+  background-color: pink;
+  /* border: 20px;  */
+}
+
+
+
+
+
+

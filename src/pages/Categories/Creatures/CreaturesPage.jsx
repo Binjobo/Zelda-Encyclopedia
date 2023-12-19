@@ -22,7 +22,7 @@ const CreaturePage = () => {
     <>
       <h1>All Creatures</h1>
 
-      <div className="monsterSearch">
+      <div className="allSearch">
         {creatures.map((creature) => (
           <CreatureCard key={creature.id} creature={creature} />
         ))}

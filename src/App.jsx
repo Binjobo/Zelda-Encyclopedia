@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import MasterSearch from "./components/MasterSearch";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/Home/HomePage";
 import CreaturesPage from "./pages/Categories/Creatures/CreaturesPage";
@@ -15,7 +14,6 @@ const App = () => {
       <div className="app">
         <h1>Zelda Wikipage</h1>
       </div>
-      <MasterSearch />
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -25,7 +23,6 @@ const App = () => {
         <Route path="/monsters" element={<MonstersPage />} />
         <Route path="/treasure" element={<TreasurePage />} />
       </Routes>
-      <HomePage />
     </>
   );
 };

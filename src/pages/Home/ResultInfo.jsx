@@ -1,4 +1,4 @@
-const CreaturesInfo = ({ info }) => {
+const ResultInfo = ({ info }) => {
   return (
     <div className="info">
       <div className="category">
@@ -38,4 +38,4 @@ const CreaturesInfo = ({ info }) => {
   );
 };
 
-export default CreaturesInfo;
+export default ResultInfo;

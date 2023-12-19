@@ -1,6 +1,5 @@
 import { useState } from "react";
-// import { useEffect } from "react";
-import SearchIcon from "./searchIcon.svg";
+import SearchIcon from "../../components/searchIcon.svg";
 import ResultInfo from "./ResultInfo";
 
 const MasterSearch = () => {
@@ -27,7 +26,7 @@ const MasterSearch = () => {
     <>
       <div className="search">
         <input
-          placeholder="Enter Exact Name"
+          placeholder="Enter Exact Name (e.g. silver lynel)"
           value={searchTerm}
           onChange={handleInput}
         ></input>
