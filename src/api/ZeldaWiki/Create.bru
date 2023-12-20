@@ -1,0 +1,27 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://api.airtable.com/v0/appLljWmxo7jCt4Z0/Favourites/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer pat25EyzKvJoj1BUU.0a96356610f1b48c626f505d70f23c1e9552fa55d668dd86fccc7022be45d6e2
+}
+
+body:json {
+  {
+    "fields": {
+      "Category": "creatures",
+      "Locations": "PrincessNecluda SeaLanayru Sea",
+      "Description": "This porgy's body is covered in armor-hard scales. The compounds in its scales, when cooked into a dish, fortify your bones and temporarily boost your defense.",
+      "Image": "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/armored_porgy/image",
+      "Name": "armored porgy"
+    }
+  }
+}

@@ -22,6 +22,9 @@ const NavBar = () => {
         <p>
           <NavLink to="/treasure">Treasures</NavLink>
         </p>
+        <p>
+          <NavLink to="/favourites">Favourites</NavLink>
+        </p>
       </ul>
     </nav>
   );

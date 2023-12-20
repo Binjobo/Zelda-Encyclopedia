@@ -6,6 +6,7 @@ import EquipmentPage from "./pages/Categories/Equipment/EquipmentPage";
 import MaterialsPage from "./pages/Categories/Materials/MaterialsPage";
 import MonstersPage from "./pages/Categories/Monsters/MonstersPage";
 import TreasurePage from "./pages/Categories/Treasure/TreasurePage";
+import FavouritesPage from "./pages/Favourite/FavouritesPage";
 import "./App.css";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/materials" element={<MaterialsPage />} />
         <Route path="/monsters" element={<MonstersPage />} />
         <Route path="/treasure" element={<TreasurePage />} />
+        <Route path="/favourites" element={<FavouritesPage />} />
       </Routes>
     </>
   );

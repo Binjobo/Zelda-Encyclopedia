@@ -7,13 +7,8 @@ body {
   height: 100vh; */
 }
 
-/* .app {
-  background-color: pink;
-} */
-
 .app h1 {
   font-size: 4rem;
-  /* margin: 2rem; */
 }
 
 /* navbar */
@@ -30,10 +25,6 @@ ul {
   padding: 0;
   border: 0;
 }
-
-/* p {
-  font-size: 1.6rem;
-} */
 
 p > a {
   background-color: rgb(28, 153, 153);
@@ -98,9 +89,24 @@ button {
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: green;
+  background-color: rgb(149, 25, 195);
 }
 
+.favouritesButton {
+  height: 35px;
+  width: 195px;
+  padding: 5px;
+  margin-top: 40px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background-color: rgb(9, 2, 11);
+
+}
+
+button:hover {
+  cursor: pointer;
+}
 
 /* allSearch */
 .allSearch > div > p:hover {
@@ -130,5 +136,7 @@ button {
 
 
 
-
+.space {
+  margin-top: 100px;
+}
 
