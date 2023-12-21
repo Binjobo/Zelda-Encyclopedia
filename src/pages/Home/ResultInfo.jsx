@@ -39,11 +39,6 @@ const ResultInfo = ({ info }) => {
 
   return (
     <div className="info">
-      <div className="favourites">
-        <button className="favouritesButton" onClick={addToFavourites}>
-          Add to Favourites
-        </button>
-      </div>
       <div className="name">
         <h2>Name</h2>
         <p>{info.name}</p>
@@ -79,6 +74,12 @@ const ResultInfo = ({ info }) => {
           }
           alt={info.name}
         />
+      </div>
+
+      <div className="favourites">
+        <button className="favouritesButton" onClick={addToFavourites}>
+          Add to Favourites
+        </button>
       </div>
 
       <hr />

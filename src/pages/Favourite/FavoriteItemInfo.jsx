@@ -1,11 +1,6 @@
 const FavoriteItemInfo = ({ info, onDelete }) => {
   return (
     <div className="info">
-      <div className="favourites">
-        <button className="deleteButton" onClick={onDelete}>
-          Remove from Favourites
-        </button>
-      </div>
       <div className="name">
         <h2>Name</h2>
         <p>{info.Name}</p>
@@ -41,6 +36,12 @@ const FavoriteItemInfo = ({ info, onDelete }) => {
           }
           alt={info.Name}
         />
+      </div>
+
+      <div className="favourites">
+        <button className="deleteButton" onClick={onDelete}>
+          Remove from Favourites
+        </button>
       </div>
 
       <hr />

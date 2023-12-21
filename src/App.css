@@ -108,17 +108,6 @@ button {
   background-color: rgb(9, 2, 11);
 }
 
-.deleteButton {
-  height: 38px;
-  width: 260px;
-  padding: 5px;
-  margin-top: 40px;
-  color: white;
-  font-size: 1.2rem;
-  border-radius: 50px;
-  background-color: rgb(9, 2, 11);
-}
-
 button:hover {
   cursor: pointer;
 }
@@ -153,3 +142,19 @@ button:hover {
   margin-top: 100px;
 }
 
+
+/* favoriteItemInfo */
+.deleteButton {
+  height: 38px;
+  width: 260px;
+  padding: 5px;
+  margin-top: 40px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background-color: rgb(9, 2, 11);
+}
+
+.favourites {
+  margin-bottom: 40px;
+}
