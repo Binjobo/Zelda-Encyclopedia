@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SearchIcon from "../../components/searchIcon.svg";
 import ResultInfo from "./ResultInfo";
-// import FavouritesPage
 
 const MasterSearch = () => {
   const URL = "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/";
@@ -41,10 +40,6 @@ const MasterSearch = () => {
       <div className="searchResult">
         {Object.keys(itemInfo).length > 0 && <ResultInfo info={itemInfo} />}
       </div>
-
-      {/* <div className="addToFav">
-        <h1>Favourite items</h1>
-      </div> */}
     </>
   );
 };

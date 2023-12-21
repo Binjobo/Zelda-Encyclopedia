@@ -1,10 +1,46 @@
+import { useState } from "react";
+
+const token =
+  "pat25EyzKvJoj1BUU.0a96356610f1b48c626f505d70f23c1e9552fa55d668dd86fccc7022be45d6e2";
+
 const ResultInfo = ({ info }) => {
+  const [favItems, setFavItems] = useState([]);
+
+  const addToFavourites = async () => {
+    const data = {
+      fields: {
+        Locations: info.common_locations?.toString(),
+        Category: info.category?.toString(),
+        Name: info.name,
+        "Item Drops": info.drops?.toString(),
+        Description: info.description?.toString(),
+        Image: info.image,
+      },
+    };
+
+    // console.log(JSON.stringify(data));
+
+    const url = "https://api.airtable.com/v0/appLljWmxo7jCt4Z0/Favourites/";
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(data),
+    });
+    const jsonData = await response.json();
+    setFavItems([jsonData, ...favItems]);
+  };
+
   return (
     <div className="info">
-      {/* new code */}
-      {/* <div className="favourites">
-        <button className="favouritesButton">Add to Favourites</button>
-      </div> */}
+      <div className="favourites">
+        <button className="favouritesButton" onClick={addToFavourites}>
+          Add to Favourites
+        </button>
+      </div>
       <div className="name">
         <h2>Name</h2>
         <p>{info.name}</p>
