@@ -46,22 +46,22 @@ const EquipmentInfo = ({ info }) => {
 
       <div className="category">
         <h2>Category</h2>
-        <p>{info.category}</p>
+        <p>{info.category?.toString()}</p>
       </div>
 
       <div className="locations">
         <h2>Locations</h2>
-        <p>{info.common_locations}</p>
+        <p>{info.common_locations?.toString()}</p>
       </div>
 
       <div className="description">
         <h2>Description</h2>
-        <p>{info.description}</p>
+        <p>{info.description?.toString()}</p>
       </div>
 
       <div className="drops">
         <h2>Items Drops</h2>
-        <p>{info.drops}</p>
+        <p>{info.drops?.toString()}</p>
       </div>
 
       <div className="picture">
