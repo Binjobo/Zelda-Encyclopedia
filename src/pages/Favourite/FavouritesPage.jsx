@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import FavoriteItemInfo from "./FavoriteItemInfo";
+// import ResultInfo from "../Home/ResultInfo";
 
 const token =
   "pat25EyzKvJoj1BUU.0a96356610f1b48c626f505d70f23c1e9552fa55d668dd86fccc7022be45d6e2";
 
-export default function Airtable() {
+export default function FavouritesPage() {
   const [favItems, setFavItems] = useState([]);
 
   useEffect(() => {
@@ -22,9 +24,9 @@ export default function Airtable() {
     })();
   }, []);
 
-  const handleDelete = async () => {
-    const airtableId = "recTK5Km4cqwUShKv";
-    const url = `https://api.airtable.com/v0/appLljWmxo7jCt4Z0/Favourites/${airtableId}`;
+  const handleDelete = async (itemId) => {
+    // const itemId = "reckPIk61xqZt1AHe";
+    const url = `https://api.airtable.com/v0/appLljWmxo7jCt4Z0/Favourites/${itemId}`;
     const response = await fetch(url, {
       method: "DELETE",
       headers: {
@@ -32,14 +34,29 @@ export default function Airtable() {
         Authorization: `Bearer ${token}`,
       },
     });
-    const jsonData = await response.json();
-    setFavItems(favItems.filter((p) => p.id !== jsonData.id));
+    // const jsonData = await response.json();
+    // setFavItems(favItems.filter((p) => p.id !== jsonData.id));
+
+    //from chatGPT (dunno why it works)
+    if (response.ok) {
+      // Remove the deleted item from the state
+      setFavItems((prevItems) =>
+        prevItems.filter((item) => item.id !== itemId)
+      );
+    }
   };
+
+  console.log(favItems);
 
   return (
     <>
-      <button onClick={handleDelete}>Delete</button>
-      <pre>{JSON.stringify(favItems, null, 2)}</pre>
+      {favItems.map((item) => (
+        <FavoriteItemInfo
+          key={item.id}
+          info={item.fields}
+          onDelete={() => handleDelete(item.id)}
+        />
+      ))}
     </>
   );
 }

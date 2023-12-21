@@ -7,6 +7,7 @@ const MasterSearch = () => {
 
   const [itemInfo, setItemInfo] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [favItems, setFavItems] = useState([]);
 
   const searchZeldaItem = async (entryItem) => {
     const response = await fetch(`${URL}${entryItem}`);
@@ -21,6 +22,10 @@ const MasterSearch = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     searchZeldaItem(searchTerm);
+  };
+
+  const handleAddToFavorites = (newItem) => {
+    setFavItems([newItem, ...favItems]);
   };
 
   return (
@@ -38,7 +43,13 @@ const MasterSearch = () => {
       </form>
 
       <div className="searchResult">
-        {Object.keys(itemInfo).length > 0 && <ResultInfo info={itemInfo} />}
+        {Object.keys(itemInfo).length > 0 && (
+          <ResultInfo
+            info={itemInfo}
+            favItems={favItems}
+            onAddToFavorites={handleAddToFavorites}
+          />
+        )}
       </div>
     </>
   );
