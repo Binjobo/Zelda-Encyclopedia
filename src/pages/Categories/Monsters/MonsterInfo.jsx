@@ -32,6 +32,9 @@ const MonsterInfo = ({ info }) => {
     });
     const jsonData = await response.json();
     setFavItems([jsonData, ...favItems]);
+
+    // Show pop-up message
+    window.alert("Added to Favourites!");
   };
 
   return (

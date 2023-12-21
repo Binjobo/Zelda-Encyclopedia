@@ -8,20 +8,28 @@ const MasterSearch = () => {
   const [itemInfo, setItemInfo] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [favItems, setFavItems] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const searchZeldaItem = async (entryItem) => {
     const response = await fetch(`${URL}${entryItem}`);
     const data = await response.json();
     setItemInfo(data.data);
+    console.log(data.data);
+    if (Object.keys(data.data).length === 0) {
+      setErrorMessage("Invalid Search Name");
+    } else {
+      setItemInfo(data.data);
+    }
   };
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    searchZeldaItem(searchTerm);
+    setErrorMessage("");
+    await searchZeldaItem(searchTerm);
   };
 
   const handleAddToFavorites = (newItem) => {
@@ -51,6 +59,7 @@ const MasterSearch = () => {
           />
         )}
       </div>
+      <p className="errorMessage">{errorMessage}</p>
     </>
   );
 };
