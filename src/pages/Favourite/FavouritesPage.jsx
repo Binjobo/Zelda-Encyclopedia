@@ -32,6 +32,8 @@ export default function FavouritesPage() {
         Authorization: `Bearer ${token}`,
       },
     });
+    // Show pop-up message
+    window.alert("Removed from Favourites!");
 
     //referenced from chatGPT
     if (response.ok) {
