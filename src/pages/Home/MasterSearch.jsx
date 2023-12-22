@@ -55,6 +55,7 @@ const MasterSearch = () => {
           <ResultInfo
             info={itemInfo}
             favItems={favItems}
+            setFavItems={setFavItems}
             onAddToFavorites={handleAddToFavorites}
           />
         )}

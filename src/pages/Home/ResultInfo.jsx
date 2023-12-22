@@ -1,11 +1,7 @@
-import { useState } from "react";
-
 const token =
   "pat25EyzKvJoj1BUU.0a96356610f1b48c626f505d70f23c1e9552fa55d668dd86fccc7022be45d6e2";
 
-const ResultInfo = ({ info }) => {
-  const [favItems, setFavItems] = useState([]);
-
+const ResultInfo = ({ info, favItems, setFavItems }) => {
   const addToFavourites = async () => {
     const data = {
       fields: {
