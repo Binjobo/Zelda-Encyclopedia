@@ -14,23 +14,6 @@ const MaterialCard = ({ material }) => {
     setIsInfoVisible(true); // Added to show the equipment info when data is received
   };
 
-  // //previous code
-  // const handleClick = () => {
-  //   searchZeldaMaterial(material.id);
-  // };
-  // return (
-  //   <>
-  //     <div>
-  //       <p onClick={handleClick}>{material.name}</p>
-  //     </div>
-  //     <div className="searchResult">
-  //       {Object.keys(materialInfo).length > 0 && (
-  //         <MaterialInfo info={materialInfo} />
-  //       )}
-  //     </div>
-  //   </>
-  // );
-
   const handleClick = () => {
     if (!isInfoVisible) {
       searchZeldaMaterial(material.id);

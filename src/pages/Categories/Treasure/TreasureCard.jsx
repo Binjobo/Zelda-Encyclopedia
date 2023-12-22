@@ -14,23 +14,6 @@ const TreasureCard = ({ treasure }) => {
     setIsInfoVisible(true); // Added to show the equipment info when data is received
   };
 
-  // //previous code
-  // const handleClick = () => {
-  //   searchZeldaTreasure(treasure.id);
-  // };
-  // return (
-  //   <>
-  //     <div>
-  //       <p onClick={handleClick}>{treasure.name}</p>
-  //     </div>
-  //     <div className="searchResult">
-  //       {Object.keys(treasureInfo).length > 0 && (
-  //         <TreasureInfo info={treasureInfo} />
-  //       )}
-  //     </div>
-  //   </>
-  // );
-
   const handleClick = () => {
     if (!isInfoVisible) {
       searchZeldaTreasure(treasure.id);
