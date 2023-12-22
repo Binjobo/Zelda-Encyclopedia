@@ -28,14 +28,7 @@ const FavoriteItemInfo = ({ info, onDelete }) => {
 
       <div className="picture">
         <h2>Image</h2>
-        <img
-          src={
-            info.Image !== "N/A"
-              ? info.Image
-              : "https://via.placeholder.com/200"
-          }
-          alt={info.Name}
-        />
+        <img src={info.Image} alt={info.Name} />
       </div>
 
       <div className="favourites">

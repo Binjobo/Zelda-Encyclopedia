@@ -66,14 +66,7 @@ const CreaturesInfo = ({ info }) => {
 
       <div className="picture">
         <h2>Image</h2>
-        <img
-          src={
-            info.image !== "N/A"
-              ? info.image
-              : "https://via.placeholder.com/200"
-          }
-          alt={info.name}
-        />
+        <img src={info.image} alt={info.name} />
       </div>
 
       <div className="favourites">
