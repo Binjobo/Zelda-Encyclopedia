@@ -5,13 +5,13 @@ const EquipmentCard = ({ equipment }) => {
   const URL = "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/";
 
   const [equipmentInfo, setEquipmentInfo] = useState([]);
-  const [isInfoVisible, setIsInfoVisible] = useState(false); // New state variable added
+  const [isInfoVisible, setIsInfoVisible] = useState(false);
 
   const searchZeldaEquipment = async (entryEquipment) => {
     const response = await fetch(`${URL}${entryEquipment}`);
     const data = await response.json();
     setEquipmentInfo(data.data);
-    setIsInfoVisible(true); // Added to show the equipment info when data is received
+    setIsInfoVisible(true);
   };
 
   const handleClick = () => {

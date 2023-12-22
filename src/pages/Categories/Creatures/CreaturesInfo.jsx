@@ -18,8 +18,6 @@ const CreaturesInfo = ({ info }) => {
       },
     };
 
-    // console.log(JSON.stringify(data));
-
     const url = "https://api.airtable.com/v0/appLljWmxo7jCt4Z0/Favourites/";
 
     const response = await fetch(url, {

@@ -11,7 +11,7 @@ const CreatureCard = ({ creature }) => {
     const response = await fetch(`${URL}${entryCreature}`);
     const data = await response.json();
     setCreatureInfo(data.data);
-    setIsInfoVisible(true); // Added to show the equipment info when data is received
+    setIsInfoVisible(true); // Added to show the creature info when data is received
   };
 
   const handleClick = () => {

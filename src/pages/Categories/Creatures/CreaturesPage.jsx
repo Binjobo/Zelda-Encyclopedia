@@ -10,7 +10,6 @@ const CreaturePage = () => {
   const searchCreatures = async () => {
     const response = await fetch(URL);
     const data = await response.json();
-    // console.log(data.data);
     setCreatures(data.data);
   };
 

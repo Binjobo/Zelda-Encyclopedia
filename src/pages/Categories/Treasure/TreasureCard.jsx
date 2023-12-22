@@ -5,13 +5,13 @@ const TreasureCard = ({ treasure }) => {
   const URL = "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/";
 
   const [treasureInfo, setTreasureInfo] = useState([]);
-  const [isInfoVisible, setIsInfoVisible] = useState(false); // New state variable added
+  const [isInfoVisible, setIsInfoVisible] = useState(false);
 
   const searchZeldaTreasure = async (entryTreasure) => {
     const response = await fetch(`${URL}${entryTreasure}`);
     const data = await response.json();
     setTreasureInfo(data.data);
-    setIsInfoVisible(true); // Added to show the equipment info when data is received
+    setIsInfoVisible(true);
   };
 
   const handleClick = () => {
